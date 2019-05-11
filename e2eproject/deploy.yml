@@ -16,8 +16,8 @@
     - tomcat
 
   tasks:
-  
-   - copy:
+
+  - copy:
       src: /var/lib/jenkins/workspace/nvn-shoppingkart/target/nvnshoppingcart.war
       dest: /usr/local/apache-tomcat-8.0.23/webapps/
       mode: 0777
@@ -27,3 +27,4 @@
   - name: start tomcat service
     become: true
     service: name=tomcat state=started
+
